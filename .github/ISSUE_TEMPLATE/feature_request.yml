@@ -1,0 +1,36 @@
+name: Idea / feature request
+description: Something that would make Rankwise better for your PvP.
+title: "[idea] "
+labels: ["enhancement"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Rankwise is made for players who mainly play PvP and care about honor and rank. Ideas that help you farm honor smarter or learn from your fights are especially welcome.
+  - type: textarea
+    id: idea
+    attributes:
+      label: Your idea
+      placeholder: "Show honor per hour for each battleground map."
+    validations:
+      required: true
+  - type: textarea
+    id: why
+    attributes:
+      label: Why would it help?
+      description: What would you be able to do that is hard today?
+  - type: dropdown
+    id: tab
+    attributes:
+      label: Where would it fit?
+      options:
+        - Honor
+        - Opponents
+        - Classes
+        - History
+        - Settings
+        - Battleground summary
+        - Alerts and sounds
+        - Minimap button
+        - Something new
+        - Not sure
