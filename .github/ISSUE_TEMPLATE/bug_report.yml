@@ -1,0 +1,66 @@
+name: Bug report
+description: Something in Rankwise does not work as it should.
+title: "[bug] "
+labels: ["bug"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for helping! **Tip:** the easiest way is the **Report a bug** button in the game (Settings, or `/rk bug`) – it fills in the version and the errors for you.
+        Please do not write character names here (yours or your opponents') – reports are public.
+  - type: textarea
+    id: what
+    attributes:
+      label: What happened?
+      description: What did you do, and what went wrong? Which tab (Honor, Opponents, Classes, History, Settings) or which window (battleground summary, alert, post to chat)?
+      placeholder: "I won a duel, but the History tab shows it as a loss."
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: What did you expect?
+      placeholder: "A win against that player."
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps to make it happen again (if you know them)
+      placeholder: |
+        1. Duel a friend and win
+        2. Open Rankwise with /rk
+        3. Go to History
+  - type: input
+    id: version
+    attributes:
+      label: Rankwise version
+      description: Type `/rk version` in the game.
+      placeholder: "0.3.0"
+    validations:
+      required: true
+  - type: dropdown
+    id: where
+    attributes:
+      label: Where were you?
+      options:
+        - Battleground
+        - World PvP
+        - Duel
+        - Not fighting (just the window or the settings)
+        - I don't know
+  - type: textarea
+    id: probe
+    attributes:
+      label: API check (for honor or rank problems)
+      description: Type `/rk probe` in the game, copy the report (Ctrl+C) and paste it here. Leave empty if your bug is not about honor or rank.
+      render: text
+  - type: textarea
+    id: errors
+    attributes:
+      label: Error messages (if any)
+      description: Lua errors from the game or another error addon (e.g. BugSack). Leave empty if there were none.
+      render: text
+  - type: textarea
+    id: screenshot
+    attributes:
+      label: Screenshot (optional)
+      description: Drag a screenshot in here. Please crop or blur names.
